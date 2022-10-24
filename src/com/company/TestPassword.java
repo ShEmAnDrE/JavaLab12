@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class TestPassword {
     public static boolean checkPass(String s){
-        return Pattern.compile("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z_]{8,}").matcher(s).find();
+        return Pattern.compile("(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g").matcher(s).find();
     }
 
     public static void main(String[] args) {
